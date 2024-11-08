@@ -1,4 +1,4 @@
-#создатель: @Daniel1236n @amm1e
+#создатель: @Daniel1236n & @amm1e
 #----------------------------------------------------------------------------
 from .. import loader, utils
 from .. import loader
