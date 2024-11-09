@@ -11,7 +11,7 @@ class uselesswmod(loader.Module):
     strings = {"name": "uselessweb"}
     strings_en = {"Web": "<emoji document_id=5318759457801385682>👍</emoji> <b>Your random site</b>: " + uselesswebr}
     strings_ru = {"Web": "<emoji document_id=5318759457801385682>👍</emoji> <b>Ваш рандомный сайт</b>: " + uselesswebr}
-
+    uselesswebr = ''
 
     @loader.command(
         en_doc = "- Random useless site"
