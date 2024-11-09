@@ -1,4 +1,4 @@
-#meta developer: @Daniel1236n & @amm1e
+#meta developer: @Daniel1236n & @amm1e & @AmeMods
 #----------------------------------------------------------------------------
 from .. import loader, utils
 from .. import loader
@@ -9,11 +9,15 @@ class hzMod(loader.Module):
     """Модуль для ответа на сообщения 'хз' в определенном чате."""
     strings = {"name": "xzmodule"}
 
+    
     async def client_ready(self, client, db):
         self.client = client
 
+    @loader.command(
+        ru_doc = "Вкл/Выкл модуль в этом чате"
+    ) 
     async def xzcmd(self, message):
-        """Активировать или деактивировать автоматические ответы в чате"""
+        """On/Off mod in current chat"""
         chat_id = message.chat_id
         if not message.chat_id:
             await message.edit("Эта команда должна быть использована в чате.")
@@ -32,7 +36,7 @@ class hzMod(loader.Module):
 
     @loader.unrestricted
     async def watcher(self, message):
-        """Следит за сообщениями и отвечает 'и чё?'"""
+        """Следит за сообщениями и отвечает 'хз'"""
         chat_id = message.chat_id
         active_chats = self.db.get(self.strings["name"], "active_chats", [])
 
