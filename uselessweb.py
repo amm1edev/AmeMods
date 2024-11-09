@@ -21,4 +21,4 @@ class uselesswmod(loader.Module):
         response = requests.get('https://gist.githubusercontent.com/quest/07bbc6908f84b50a9fc8/raw/d8983a0723d07203816b78953ff52f07423c808d/uselessweb.json')
         file = response.json()
         uselesswebr = random.choice(file['uselessweb'])
-        await message.edit(self.strings("Web" + uselesswebr))
+        await message.edit(self.strings("Web"))
