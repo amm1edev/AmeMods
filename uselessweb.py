@@ -3,7 +3,7 @@
 import requests
 import random
 from .. import loader, utils
-from .. import loader
+from hikkatl.types import Message
 
 @loader.tds
 class uselesswmod(loader.Module):
