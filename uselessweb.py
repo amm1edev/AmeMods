@@ -9,8 +9,8 @@ from .. import loader
 class uselesswmod(loader.Module):
     """Useless mod for useless sites."""
     strings = {"name": "uselessweb"}
-    strings_ru = {"Useless mod for useless sites." = "Бесполезный мод для бесполезных сайтов."}
-    strings_en = {"<emoji document_id=5318759457801385682>👍</emoji> <b>Ваш рандомный сайт</b>:" = "<emoji document_id=5318759457801385682>👍</emoji> <b>Your random site</b>:"}
+    strings_ru = {"Useless mod for useless sites.": "Бесполезный мод для бесполезных сайтов."}
+    strings_en = {"<emoji document_id=5318759457801385682>👍</emoji> <b>Ваш рандомный сайт</b>:": "<emoji document_id=5318759457801385682>👍</emoji> <b>Your random site</b>:"}
 
 
     @loader.command(
