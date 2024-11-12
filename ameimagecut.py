@@ -8,17 +8,17 @@ import zipfile
 from .. import loader, utils
 
 @loader.tds
-class ImageCutMod(loader.Module):
+class AmeImageCutMod(loader.Module):
     """Модуль для разрезания изображения на части."""
     
-    strings = {"name": "ImageCut"}
+    strings = {"name": "AmeImageCut"}
 
     MAX_ROWS = 10
     MAX_COLS = 10
 
     @loader.command()
     async def cut(self, message):
-        """Использование: .cut <кол-во по вертикали> <кол-во по горизонтали>"""
+        """{кол-во по вертикали} {кол-во по горизонтали} — Разрезать изображение на части."""
         imagesinzip = int() 
         args = utils.get_args(message)
         await message.edit("<emoji document_id=5220046725493828505>✍️</emoji> <b>Ожидайте...</b>") 
