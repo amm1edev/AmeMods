@@ -47,7 +47,7 @@ class AmeMusic(loader.Module):
                         await message.delete()
                         return
 
-                    await asyncio.sleep(3)
+                    await asyncio.sleep(10)
                     updated_response = await message.client.get_messages(conv.chat_id, ids=response.id)
                     if updated_response.text != response.text and "Не удалось найти трек" in updated_response.text:
                         await message.edit(self.strings("no_results"))
