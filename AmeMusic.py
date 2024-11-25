@@ -33,7 +33,7 @@ class AmeMusic(loader.Module):
         await message.edit(self.strings("searching"))
         
         try:
-            async with message.client.conversation("@AmeMusicbot") as conv:
+            async with message.client.conversation("@LyaDownbot") as conv:
                 await conv.send_message(args)
                 while True:
                     response = await conv.get_response()
