@@ -1,4 +1,4 @@
-#meta developer: @amm1e & @AmeMods
+#meta developer: @thisLyomi & @AmekaMods
 
 from telethon import events
 from .. import loader, utils
@@ -6,17 +6,17 @@ import asyncio
 
 @loader.tds
 class AmeMusic(loader.Module):
-    """Модуль для поиска музыки, основанный на боте @AmeMusicbot"""
+    """Модуль для поиска музыки, основанный на боте @LyaDownbot"""
     
     strings = {
-        "name": "AmeMusic",
+        "name": "LyaMusic",
         "searching": "<b>🔍 Ищу музыку...</b>",
         "no_results": "<b>❌ Произошла ошибка. Попробуйте указать точное название трека, либо трек невозможно найти.</b>",
         "loading": "<b>⏳ Загрузка трека...</b>",
         "enter_name": "<b>❌ Введите название трека </b>"
     }
     strings_en = {
-        "name": "AmeMusic",
+        "name": "LyaMusic",
         "searching": "<b>🔍 Searching music...</b>",
         "no_results": "<b>❌ Could not find the track, try entering the correct track name or track author.</b>",
         "loading": "<b>⏳ Downloading track...</b>",
