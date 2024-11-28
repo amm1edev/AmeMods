@@ -1,8 +1,8 @@
 #meta developer: @thisLyomi & @AmekaMods
 
-from .. import loader
 import os
 import requests
+from .. import loader
 
 @loader.tds
 class AmeChangeLoaderText(loader.Module):
