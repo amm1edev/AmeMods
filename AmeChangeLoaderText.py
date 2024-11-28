@@ -1,5 +1,4 @@
-
-#meta developer: @amm1e & @AmeMods
+# meta developer: @thisLyomi & @AmekaMods
 
 from .. import loader
 import os
