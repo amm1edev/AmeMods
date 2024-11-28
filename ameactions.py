@@ -1,5 +1,4 @@
-# meta developer: @amm1e
-# говнокод
+#meta developer: @thisLyomi & @AmekaMods
 
 from hikkatl.types import Message
 from .. import utils, loader
