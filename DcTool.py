@@ -1,4 +1,4 @@
-#meta developer: @amm1e
+#meta developer: @thisLyomi & @AmekaMods
 
 from .. import loader, utils
 from telethon.tl.types import ChatBannedRights
