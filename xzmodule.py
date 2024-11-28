@@ -1,7 +1,6 @@
-#meta developer: @Daniel1236n & @amm1e & @AmeMods
+#meta developer: @Daniel1236n & @thisLyomi & @AmekaMods
 #----------------------------------------------------------------------------
 from .. import loader, utils
-from .. import loader
 from telethon import events
 
 @loader.tds
