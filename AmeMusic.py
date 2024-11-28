@@ -1,8 +1,8 @@
 #meta developer: @thisLyomi & @AmekaMods
 
+import asyncio
 from telethon import events
 from .. import loader, utils
-import asyncio
 
 @loader.tds
 class AmeMusic(loader.Module):
