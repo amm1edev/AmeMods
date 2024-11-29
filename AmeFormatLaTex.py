@@ -1,8 +1,8 @@
 #meta developer: @thisLyomi & @AmekaMods
 
-import os
 from .. import loader, utils
 import matplotlib.pyplot as plt
+import os
 
 @loader.tds
 class AmeFormatLaTex(loader.Module):
