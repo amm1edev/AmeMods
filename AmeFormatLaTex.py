@@ -2,30 +2,29 @@
 
 from .. import loader, utils
 import matplotlib.pyplot as plt
-import os
 
 @loader.tds
 class AmeFormatLaTex(loader.Module):
-    """Конвертирует LaTeX-код в изображение."""
+    """Конвертирует LaTex в изображение."""
     strings = {"name": "AmeFormatLaTex"}
 
     async def client_ready(self, client, db):
         self.client = client
 
     async def latexcmd(self, message):
-        """{Formule} - Конвертирует LaTeX-код в изображение."""
+        """{Formule} - Конвертирует LaTex в изображение."""
         latex_code = utils.get_args_raw(message)
         if not latex_code:
-            await message.edit("❌ Укажите LaTeX-код!")
+            await message.edit("❌ <b>Укажите LaTex!</b>")
             return
         
         output_path = "latex_output.png"
         try:
             self._generate_image(latex_code, output_path)
-            await self.client.send_file(message.chat_id, output_path, caption="✅ Результат:")
+            await self.client.send_file(message.chat_id, output_path, caption="✅ <b>Результат:</b>")
             os.remove(output_path)
         except Exception as e:
-            await message.edit(f"❌ Ошибка: {e}")
+            await message.edit(f"❌ <b>Ошибка: </b>{e}")
     
     def _generate_image(self, latex_code, output_path):
         fig, ax = plt.subplots(figsize=(2, 1), dpi=200)
