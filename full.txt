@@ -5,3 +5,4 @@ ameactions
 ameimagecut
 uselessweb
 xzmodule
+AmeFormatLaTex
