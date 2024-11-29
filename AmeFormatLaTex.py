@@ -1,5 +1,6 @@
 #meta developer: @thisLyomi & @AmekaMods
 
+import os
 from .. import loader, utils
 import matplotlib.pyplot as plt
 
