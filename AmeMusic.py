@@ -5,7 +5,7 @@ from telethon import events
 from .. import loader, utils
 
 @loader.tds
-class AmeMusic(loader.Module):
+class LyaMusic(loader.Module):
     """Модуль для поиска музыки, основанный на боте @LyaDownbot"""
     
     strings = {
