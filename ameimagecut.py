@@ -1,11 +1,11 @@
 #meta developer: @thisLyomi & @AmekaMods
 
-import io
-import zipfile
 from .. import loader, utils
 from telethon import types
 from telethon.tl.types import DocumentAttributeFilename
 from PIL import Image
+import io
+import zipfile
 
 @loader.tds
 class AmeImageCutMod(loader.Module):
