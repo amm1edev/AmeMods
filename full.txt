@@ -6,3 +6,4 @@ ameimagecut
 uselessweb
 xzmodule
 AmeFormatLaTex
+QuoteMsg
