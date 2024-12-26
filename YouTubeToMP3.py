@@ -1,4 +1,4 @@
-#meta develoeper: @thisLyomi & @AmekaMods
+#meta developer: @thisLyomi & @AmekaMods
 
 from telethon.tl.types import Message
 import os
