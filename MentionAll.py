@@ -32,7 +32,7 @@ class MentionAllMod(loader.Module):
             return
 
         text = args + "\n\n" if args else ""
-        text += "<tg-spoiler>" + " ".join(mentions) + "</tg-spoiler>
+        text += "<tg-spoiler>" + " ".join(mentions) + "</tg-spoiler>"
 
         if len(text) > 4096:
             await message.edit("<b>Слишком много участников для упоминания!</b>")
