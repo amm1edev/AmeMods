@@ -8,3 +8,4 @@ xzmodule
 AmeFormatLaTex
 QuoteMsg
 YouTubeToMP3
+MentionAll
