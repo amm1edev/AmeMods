@@ -15,7 +15,7 @@ class MentionAllMod(loader.Module):
         chat = await message.get_chat()
 
         if not isinstance(chat, (types.Chat, types.Channel)) or not chat.megagroup:
-            await message.edit("    <b>Команда доступна только в супергруппах!</b>")
+            await message.edit("<b>Команда доступна только в супергруппах!</b>")
             return
 
         await message.edit("<b>Собираю список участников...</b>")
