@@ -25,7 +25,7 @@ class LyaMusic(loader.Module):
 
     async def searchmcmd(self, message):
         """{Название трека} - Поиск трека."""
-        args = utils.get_args_raw(message)
+        args = "/search" + utils.get_args_raw(message)
         if not args:
             await message.edit(self.strings("enter_name"))
             return
