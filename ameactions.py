@@ -14,105 +14,119 @@ class AmeActions(loader.Module):
         """- kiss [reply] Целовать человека из репли"""
         me = await self._client.get_me()
         reply = await message.get_reply_message()
-        susr = me.username
+        susr = me.first_name
+        sid = me.id
         if reply == None:
             await utils.answer(message,"❌ | <b>Команда работает в ответ на сообщение пользователя.</b>")
         elif reply != None:
-            usr = reply.sender.username
-            if susr == usr:
+            usr = reply.sender.first_name
+            uid = reply.sender.id
+            if sid == uid:
                 await utils.answer(message,"❌ |<b> Самолюбие конечно хорошо, но держи его при себе.</b>")
             else:
-                await utils.answer(message, f"<emoji document_id=5222102889547185747>💋</emoji> | <b> {susr} поцеловал(а)@{usr}</b>")
+                await utils.answer(message, f"<emoji document_id=5222102889547185747>💋</emoji> | <b> <a href='tg://user?id={sid}'>{susr}</a> поцеловал(а) <a href='tg://user?id={uid}'>{usr}</a></b>")
                 
     @loader.command()
     async def hug(self, message: Message):
         """- hug [reply] Обнимать человека из репли"""
         me = await self._client.get_me()
         reply = await message.get_reply_message()
-        susr = me.username
+        susr = me.first_name
+        sid = me.id
         if reply == None:
             await utils.answer(message,"❌ | <b>Команда работает в ответ на сообщение пользователя.</b>")
         elif reply != None:
-            usr = reply.sender.username
-            if susr == usr:
+            usr = reply.sender.first_name
+            uid = reply.sender.id
+            if sid == uid:
                 await utils.answer(message,"❌ | <b>Кто тебе запрещает обняться с самим собой в реальной жизни? </b>")
             else:
-                await utils.answer(message, f"<emoji document_id=5222325171284622461>💘</emoji> | <b> {susr} обнял(а) @{usr}</b>")
+                await utils.answer(message, f"<emoji document_id=5222325171284622461>💘</emoji> |  <b><a href='tg://user?id={sid}'>{susr}</a> обнял(а) <a href='tg://user?id={uid}'>{usr}</a></b>")
                 
     @loader.command()
     async def push(self, message: Message):
         """- push [reply] Толкать человека из репли"""
         me = await self._client.get_me()
         reply = await message.get_reply_message()
-        susr = me.username
+        susr = me.first_name
+        sid = me.id
         if reply == None:
             await utils.answer(message,"❌ | <b>Команда работает в ответ на сообщение пользователя.</b>")
         elif reply != None:
-            usr = reply.sender.username
-            if susr == usr:
+            usr = reply.sender.first_name
+            uid = reply.sender.id
+            if sid == uid:
                 await utils.answer(message,"❌ | <b>Покажи всем как ты толкаешь самого себя.</b>")
             else:
-                await utils.answer(message, f"<emoji document_id=5449552292980214333>🙌</emoji> | <b> {susr} толкнул(а) @{usr}</b>")
+                await utils.answer(message, f"<emoji document_id=5449552292980214333>🙌</emoji> | <b> <a href='tg://user?id={sid}'>{susr}</a> толкнул(а) <a href='tg://user?id={uid}'>{usr}</a></b>")
                 
     @loader.command()
     async def hit(self, message: Message):
         """- hit [reply] Ударить человека из репли"""
         me = await self._client.get_me()
         reply = await message.get_reply_message()
-        susr = me.username
+        susr = me.first_name
+        sid = me.id
         if reply == None:
             await utils.answer(message,"❌ | <b>Команда работает в ответ на сообщение пользователя.</b>")
         elif reply != None:
-            usr = reply.sender.username
-            if susr == usr:
+            usr = reply.sender.first_name
+            uid = reply.sender.id
+            if sid == uid:
                 await utils.answer(message,"❌ | <b>Мазохизм не приветствуется.</b>")
             else:
-                await utils.answer(message, f"<emoji document_id=5404854933402965409>💔</emoji> | <b> {susr} ударил(а) @{usr}</b>")
+                await utils.answer(message, f"<emoji document_id=5404854933402965409>💔</emoji> | <b> <a href='tg://user?id={sid}'>{susr}</a> ударил(а) <a href='tg://user?id={uid}'>{usr}</a></b>")
                 
     @loader.command()
     async def scold(self, message: Message):
         """- scold [reply] Ругать человека из репли"""
         me = await self._client.get_me()
         reply = await message.get_reply_message()
-        susr = me.username
+        susr = me.first_name
+        sid = me.id
         if reply == None:
             await utils.answer(message,"❌ | <b>Команда работает в ответ на сообщение пользователя.</b>")
         elif reply != None:
-            usr = reply.sender.username
-            if susr == usr:
+            usr = reply.sender.first_name
+            uid = reply.sender.id
+            if sid == uid:
                 await utils.answer(message,"❌ | <b>Я посмотрю как ты наругаешь самого себя. </b>")
             else:
-                await utils.answer(message, f"<emoji document_id=5222102889547185747>💋</emoji> | <b> {susr} наругал(а) @{usr}</b>")
+                await utils.answer(message, f"<emoji document_id=5222102889547185747>💋</emoji> | <b> <a href='tg://user?id={sid}'>{susr}</a> наругал(а) <a href='tg://user?id={uid}'>{usr}</a></b>")
                 
     @loader.command()
     async def kill(self, message: Message):
-        """- hug [reply] Обнимает человека из репли"""
+        """- kill [reply] Убить человека из репли"""
         me = await self._client.get_me()
         reply = await message.get_reply_message()
-        susr = me.username
+        susr = me.first_name
+        sid = me.id
         if reply == None:
             await utils.answer(message,"❌ | <b>Команда работает в ответ на сообщение пользователя.</b>")
         elif reply != None:
-            usr = reply.sender.username
-            if susr == usr:
+            usr = reply.sender.first_name
+            uid = reply.sender.id
+            if sid == uid:
                 await utils.answer(message,"❌ | <b>Суицид? </b>")
             else:
-                await utils.answer(message, f"<emoji document_id=5449603119623193071>⚰️</emoji> | <b> {susr} убил(а) @{usr}</b>")
+                await utils.answer(message, f"<emoji document_id=5449603119623193071>⚰️</emoji> | <b> <a href='tg://user?id={sid}'>{susr}</a> убил(а) <a href='tg://user?id={uid}'>{usr}</a></b>")
                 
-    @loader.command(en_doc="bite")
+    @loader.command()
     async def bite(self, message: Message):
         """- bite [reply] Кусать человека из репли"""
         me = await self._client.get_me()
         reply = await message.get_reply_message()
-        susr = me.username
+        susr = me.first_name
+        sid = me.id
         if reply == None:
             await utils.answer(message,"❌ | <b>Команда работает в ответ на сообщение пользователя.</b>")
         elif reply != None:
-            usr = reply.sender.username
-            if susr == usr:
+            usr = reply.sender.first_name
+            uid = reply.sender.id
+            if sid == uid:
                 await utils.answer(message,"❌ | <b>Это какой-то фетиш? </b>")
             else:
-                await utils.answer(message, f"👄 | <b> {susr} укусил(а) @{usr}</b>")
+                await utils.answer(message, f"👄 | <b> <a href='tg://user?id={sid}'>{susr}</a> укусил(а) <a href='tg://user?id={uid}'>{usr}</a></b>")
                 
     @loader.command()
     async def caction(self, message: Message):
@@ -120,12 +134,14 @@ class AmeActions(loader.Module):
         args = utils.get_args_raw(message)
         me = await self._client.get_me()
         reply = await message.get_reply_message()
-        susr = me.username
+        susr = me.first_name
+        sid = me.id
         if reply == None:
             await utils.answer(message,"❌ | <b>Команда работает в ответ на сообщение пользователя.</b>")
         elif reply != None:
-            usr = reply.sender.username
-            if susr == usr:
+            usr = reply.sender.first_name
+            uid = reply.sender.id
+            if sid == uid:
                 await utils.answer(message,f"❌ | <b>Увы, но на себе эту команду применить нельзя.</b>")
             else:
-                await utils.answer(message, f"👤 | <b> {susr} {args} @{usr}</b>")
+                await utils.answer(message, f"👤 | <b> <a href='tg://user?id={sid}'>{susr}</a> {args} <a href='tg://user?id={uid}'>{usr}</a></b>")
