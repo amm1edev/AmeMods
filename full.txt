@@ -9,3 +9,4 @@ AmeFormatLaTex
 QuoteMsg
 YouTubeToMP3
 MentionAll
+AmeAutoReply
