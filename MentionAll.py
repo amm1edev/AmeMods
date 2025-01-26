@@ -11,11 +11,10 @@ class MentionAllMod(loader.Module):
     async def allcmd(self, message):
         """<text> - Для упоминания всех участников чата"""
         args = utils.get_args_raw(message)
-        reply = await message.get_reply_message()
         chat = await message.get_chat()
 
-        if not isinstance(chat, (types.Chat, types.Channel)) or not chat.megagroup:
-            await message.edit("<b>Команда доступна только в супергруппах!</b>")
+        if not isinstance(chat, (types.Chat, types.Channel)):
+            await message.edit("<b>Команда доступна только в группах и супергруппах!</b>")
             return
 
         await message.edit("<b>Собираю список участников...</b>")
@@ -34,8 +33,5 @@ class MentionAllMod(loader.Module):
         text = args + "\n\n" if args else ""
         text += "<tg-spoiler>" + " ".join(mentions) + "</tg-spoiler>"
 
-        if len(text) > 4096:
-            await message.edit("<b>Слишком много участников для упоминания!</b>")
-        else:
-            await message.respond(text, parse_mode="HTML")
-            await message.delete()
+        await message.respond(text, parse_mode="HTML")
+        await message.delete()
